@@ -1,0 +1,24 @@
+.trailer {
+    width: 560px;
+    height: 315px;
+}
+
+@media(max-width: 768px) {
+    .trailer {
+        width: 80%;
+    }
+}
+
+@media(max-width: 480px) {
+    .trailer {
+        width: 95%;
+        height: 315px;
+    }
+}
+
+@media(max-width: 320px) {
+    .trailer {
+        width: 100%;
+        height: 270px;
+    }
+}
