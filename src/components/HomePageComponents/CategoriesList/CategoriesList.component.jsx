@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getCategories } from '../../../redux/actions/categoryActions';
+import { getCategories, setCategory } from '../../../redux/actions/categoryActions';
 import './CategoriesList.style.css';
 
 const CategoriesList = () => {
@@ -13,7 +13,11 @@ const CategoriesList = () => {
 
     useEffect(() => {
         dispatch(getCategories());
-    }, []);
+    }, [dispatch]);
+
+    useEffect(() => {
+        dispatch(setCategory(currentCategory));
+    }, [dispatch, currentCategory]);
 
     return (
         <nav>

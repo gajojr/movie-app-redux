@@ -14,7 +14,7 @@ const MoviesList = () => {
 
     useEffect(() => {
         dispatch(getMovies());
-    }, []);
+    }, [dispatch]);
 
     return (
         <section className='movies-list-container'>
