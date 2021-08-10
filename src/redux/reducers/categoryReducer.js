@@ -25,12 +25,6 @@ export default function categoryReducer(state = initialState.categories, action)
                 loading: false,
                 error: action.message
             };
-        case types.SELECT_MOVIE_CATEGORY:
-            return {
-                ...state,
-                loading: false,
-                movies: []
-            };
         default:
             return state;
     }

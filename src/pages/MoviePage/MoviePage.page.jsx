@@ -6,7 +6,6 @@ import MovieCard from '../../components/MoviePageComponents/MovieCard/MovieCard.
 
 const MoviePage = () => {
     let { id } = useParams();
-    console.log(id)
 
     return (
         <div>

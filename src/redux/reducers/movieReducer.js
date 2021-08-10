@@ -25,6 +25,23 @@ export default function movieReducer(state = initialState.movies, action) {
                 loading: false,
                 error: action.message
             };
+        case types.LOAD_MOVIE_REQUESTED:
+            return {
+                ...state,
+                loading: true
+            }
+        case types.LOAD_MOVIE_SUCCESS:
+            return {
+                ...state,
+                loading: false,
+                movie: action.movie
+            };
+        case types.LOAD_MOVIE_FAILED:
+            return {
+                ...state,
+                loading: false,
+                error: action.message
+            };
         default:
             return state;
     }
